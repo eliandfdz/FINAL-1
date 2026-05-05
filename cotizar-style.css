@@ -1,0 +1,283 @@
+/* NAVBAR GENERAL */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  padding-top: 120px; 
+  overflow-x: hidden;
+  max-width: 100vw;
+  font-family: Arial, sans-serif;
+}
+
+body.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+.navbar-cotizar{
+    text-shadow: 2px 2px 8px black;
+  transition: background-color 0.3s ease;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #d89829; 
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  height: 120px; 
+}
+
+.navbar.scrolled {
+  background-color: rgba(204, 142, 75, 0.8); /* 80% opaco */
+  backdrop-filter: blur(6px); /* opcional: desenfoque de fondo elegante */
+}
+
+
+/* LOGO */
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 110%;
+}
+
+.logo-container img {
+  width: 270px; /* Reducido un poco para que respire */
+  max-width: 45vw;
+  margin-left: 50px;
+  display: block;
+}
+
+
+
+/* NAV LINKS agrupados y centrados */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.nav-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1.42em;
+  letter-spacing: 2.6px;
+  transition: color 1s ease, background-color 1s ease;
+  padding: 20px 25px;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  text-shadow: 2px 2px 8px rgba(88, 88, 88, 0.76);
+  color: #000000;
+  background-color: rgba(255, 196, 0, 0.027);
+   transform: scale(1.2);
+  box-shadow: 0 4px 15px rgba(0, 48, 102, 0.418);
+  text-underline-position: above;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #e4bd7a;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 999;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 1px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 1s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #ac843f;
+}
+
+/* BOTÓN EN NAVBAR */
+
+/* Asegura que los links estén alineados correctamente */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* REDES SOCIALES EN NAV */
+.nav-social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.nav-social a {
+ color: white;
+  font-size: 27px;
+  transition: ease-in-out 3s;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  transition: color 1s ease;
+}
+
+.nav-social a:hover {
+  color: #ffb223; /* o ajusta según tu diseño */
+  font-size: 30px;
+
+}
+/* BOTÓN EN NAVBAR pegado a la derecha */
+.nav-button {
+  height: 100%;
+  display: flex;
+  align-items: stretch; /* hace que el botón use todo el alto de la navbar */
+}
+
+.nav-button button {
+  height: 100%;
+  width: 220px;
+  padding: 0 40px;
+  color: white;
+  background-color: #062a53;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 1.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:  background-color 1s ease, color 0.8s ease;
+  clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+
+/* Estilo al pasar el mouse */
+.nav-button button:hover {
+  background-color: #020d3b;
+  color: #eca84f;
+  font-size: 1.7em;
+  font-weight: bolder;
+}
+
+body {
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+body.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+body.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+/* FORMULARIO DE COTIZACIÓN */
+.cotizar-formulario {
+  margin-top: 110px;
+  max-width: 1100px;
+  margin: 50px auto;
+  background-color: #e0e0e0;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(20, 43, 39, 0.1);
+}
+
+.cotizar-formulario h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 5px rgba(184, 220, 223, 0.8);
+}
+
+.cotizar-formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 250px;
+   text-shadow: 2px 2px 5px rgba(184, 220, 223, 0.8);
+}
+
+.full-width {
+  width: 100%;
+}
+
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid black;
+  background-color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding: 10px;
+}
+
+select option {
+  background-color: white;
+  color: black;
+}
+
+select option:hover {
+  background-color: #00bcd4; 
+  color: white;
+}

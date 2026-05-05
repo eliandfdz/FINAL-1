@@ -1,0 +1,180 @@
+<!-- PROTEGIENDO TU VIDA Y TU FUTURO -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto SEGNA </title>
+  <link rel="stylesheet" href="contacto-style.css">  
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">      
+</head>
+
+<script>
+  document.querySelectorAll('.arrow').forEach(arrow => {
+  arrow.addEventListener('click', () => {
+    arrow.style.animation = 'clickPulse 0.3s';
+    
+    // Limpiar la animación para que funcione en cada clic
+    arrow.addEventListener('animationend', () => {
+      arrow.style.animation = '';
+    }, { once: true });
+  });
+});
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll('.nav-link');
+
+    links.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.body.classList.add('fade-out');
+        const href = this.getAttribute('href') || this.getAttribute('data-href');
+        setTimeout(() => {
+          window.location.href = href;
+        }, 1200); // Igual que tu transición
+      });
+    });
+  });
+</script>
+
+<body>
+
+<div class="navbar-contacto">
+  <!-- LOGO -->
+  <div class="logo-container">
+      <a href="index.html">
+      <img src="LOGO.png" alt="Fegza">
+      </a>
+  </div>
+
+  <!-- NAV LINKS agrupados en una sola div contenedora -->
+  <div class="nav-links">
+    <div class="nav-link1">
+      <a href="index.html">Inicio</a>
+    </div>
+    <div class="nav-link2">
+      <div class="dropdown">
+         <a href="Red-Hospitalaria.html">Red Hospitalaria (Nuevo Leon)</a>
+        <div class="dropdown-content">
+        </div>
+      </div>
+    </div>
+    <div class="nav-link3">
+      <a href="Contacto.html">Contacto</a>
+    </div>
+  </div>
+
+<!-- REDES SOCIALES -->
+  <div class="nav-social">
+    <a href="https://www.facebook.com/SEGNA.ASESORES/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/segna.asesores/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/521234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+    <!-- BOTÓN DE NAV -->
+    <div class="nav-button">
+      <a href="Cotizar.html">
+      <button  onclick="fadeToCotizar()">Cotizar</button>
+     </a>
+    </div>
+  </div>
+ 
+
+<section class="contacto-section">
+    <div class="contacto-container">
+        <!-- Información de Contacto -->
+        <div class="contacto-info">
+            <h2>Ponte en contacto</h2>
+            <p>Estamos listos para asesorarte con la mejor protección y atencion 24/7.</p>
+            
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <span>+52 8117991418</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span>contacto@loomseguros.com</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Monterrey, Nuevo León, México</span>
+            </div>
+
+            <!-- Redes Sociales -->
+            <a href="https://www.facebook.com/SEGNA.ASESORES/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/segna.asesores/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/521234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        
+
+        <!-- Formulario de Contacto -->
+        <div class="contacto-form">
+            <form id="contactForm">
+                <div class="input-group">
+                    <input type="text" id="nombre" placeholder="Nombre completo" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Correo electrónico" required>
+                </div>
+                <div class="input-group">
+                    <input type="tel" id="telefono" placeholder="Teléfono (10 dígitos)" required>
+                </div>
+                <div class="input-group">
+                    <select id="interes">
+                        <option value="" disabled selected>Interés principal</option>
+                        <option value="seguros">Seguros (GNP, AXA, Banorte...)</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <textarea id="mensaje" rows="5" placeholder="¿Cómo podemos ayudarte?" required></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+            <div id="formStatus" class="status-msg"></div>
+        </div>
+    </div>
+</section>
+
+
+  <script>
+  window.addEventListener('load', function () {
+    document.body.classList.add('loaded');
+  });
+</script>
+
+</body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll('.nav-link');
+
+    links.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.body.classList.add('fade-out');
+        const href = this.getAttribute('href') || this.getAttribute('data-href');
+        setTimeout(() => {
+          window.location.href = href;
+        }, 1200); // Igual que tu transición
+      });
+    });
+  });
+</script>
+<script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 10) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+<script>
+  window.addEventListener('load', function () {
+    document.body.classList.add('loaded');
+  });
+</script>
+
+</html>

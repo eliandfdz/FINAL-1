@@ -1,0 +1,315 @@
+/* NAVBAR GENERAL */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* BODY */
+body {
+  padding-top: 120px; 
+  overflow-x: hidden;
+  max-width: 100vw;
+  font-family: Arial, sans-serif;
+}
+
+body.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* NAVBAR CONTACTO */
+.navbar-contacto {
+   text-shadow: 2px 2px 8px black;
+  transition: background-color 0.3s ease;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #d89829; 
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  height: 120px; 
+}
+
+/* SCROLL EFECTO (CORREGIDO) */
+.navbar-contacto.scrolled {
+  background-color: rgba(204, 142, 75, 0.8); /* 80% opaco */
+  backdrop-filter: blur(6px); /* opcional: desenfoque de fondo elegante */
+}
+
+/* LOGO */
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 110%;
+}
+
+.logo-container img {
+  width: 270px; /* Reducido un poco para que respire */
+  max-width: 45vw;
+  margin-left: 50px;
+  display: block;
+}
+
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.nav-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1.42em;
+  letter-spacing: 2.6px;
+  transition: color 1s ease, background-color 1s ease;
+  padding: 20px 25px;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  text-shadow: 2px 2px 8px rgba(88, 88, 88, 0.76);
+  color: #000000;
+  background-color: rgba(255, 196, 0, 0.027);
+   transform: scale(1.2);
+  box-shadow: 0 4px 15px rgba(0, 48, 102, 0.418);
+  text-underline-position: above;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #e4bd7a;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 999;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 10px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #ac843f;
+}
+
+/* BOTÓN EN NAVBAR */
+
+/* Asegura que los links estén alineados correctamente */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* REDES SOCIALES EN NAV */
+.nav-social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.nav-social a {
+ color: white;
+  font-size: 27px;
+  transition: ease-in-out 3s;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  transition: color 1s ease;
+}
+
+.nav-social a:hover {
+  color: #ffb223; /* o ajusta según tu diseño */
+  font-size: 30px;
+
+}
+/* BOTÓN EN NAVBAR pegado a la derecha */
+.nav-button {
+  height: 100%;
+  display: flex;
+  align-items: stretch; /* hace que el botón use todo el alto de la navbar */
+}
+
+.nav-button button {
+  height: 100%;
+  width: 220px;
+  padding: 0 40px;
+  color: white;
+  background-color: #062a53;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 1.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:  background-color 1s ease, color 0.8s ease;
+  clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+
+/* Estilo al pasar el mouse */
+.nav-button button:hover {
+  background-color: #020d3b;
+  color: #eca84f;
+  font-size: 1.7em;
+  font-weight: bolder;
+}
+
+
+
+body {
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+body.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+body.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.contacto-section {
+    padding: 80px 20px;
+    background-color: #f5f7fa;
+}
+
+.contacto-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* Panel Izquierdo (Info) */
+.contacto-info {
+    background-color: #001731;
+    color: white;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contacto-info h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #e4bd7a;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.info-item i {
+    color: #e4bd7a;
+    font-size: 1.3rem;
+}
+
+.contacto-social {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.contacto-social a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.contacto-social a:hover {
+    color: #e4bd7a;
+}
+
+/* Panel Derecho (Formulario) */
+.contacto-form {
+    padding: 60px 40px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    border-color: #001731;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background-color: #e4bd7a;
+    color: #001731;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #001731;
+    color: white;
+}
+
+.status-msg {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contacto-container {
+        grid-template-columns: 1fr;
+    }
+}

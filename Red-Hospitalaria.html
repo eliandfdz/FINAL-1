@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script src="[https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js](https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js)"></script>
+  <meta charset="UTF-8">
+  <title>Red Hospitalaria SEGNA ASESORES </title>
+  <link rel="stylesheet" href="rh-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  
+<div class="navbar-rh">
+  <!-- LOGO -->
+  <div class="logo-container">
+      <a href="index.html">
+      <img src="LOGO.png" alt="Fegza">
+      </a>
+  </div>
+
+  <!-- NAV LINKS agrupados en una sola div contenedora -->
+  <div class="nav-links">
+    <div class="nav-link1">
+      <a href="index.html">Inicio</a>
+    </div>
+    <div class="nav-link2">
+      <div class="dropdown">
+        <a href="Red-Hospitalaria.html">Red Hospitalaria (Nuevo Leon)</a>
+        <div class="dropdown-content">
+        </div>
+      </div>
+    </div>
+    <div class="nav-link3">
+      <a href="Contacto.html">Contacto</a>
+    </div>
+  </div>
+   <!-- REDES SOCIALES -->
+  <div class="nav-social">
+    <a href="https://www.facebook.com/SEGNA.ASESORES/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/segna.asesores/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/521234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+    <!-- BOTÓN DE NAV -->
+    <div class="nav-button">
+      <a href="Cotizar.html">
+      <button  onclick="fadeToCotizar()">Cotizar</button>
+     </a>
+    </div>
+  </div>
+
+<div class="Red-section">
+  <h2>Red Hospitalaria Nuevo León</h2>
+  <div class="actions-row">
+  <div class="download-container">
+  <a href="RED H.pdf" download class="btn-download" style="text-decoration: none; display: inline-block;">
+      <i class="RED-H"></i> Descargar Red Hospitalaria Completa (PDF)
+  </a>
+</div>
+
+  <!-- Contenedor de Filtros -->
+   
+  <div class="filters-container">
+    <select id="filterAseguradora">
+      <option value="all">Filtrar por Aseguradora</option>
+      <option value="banorte">Banorte</option>
+      <option value="mapfre">Mapfre</option>
+      <option value="planSeguro">Plan Seguro</option>
+      <option value="bxPlus">BX+ Seguros</option>
+      <option value="gnp">GNP</option>
+      <option value="axa">AXA</option>
+    </select>
+    </div>
+</div>
+</div>
+
+
+  <div class="Red-container">
+    <!-- BANORTE -->
+    <!-- Transforma T -->
+    <div class="hospital" data-aseguradora="banorte" data-plan="transforma">
+        <h3>Doctors Hospital East</h3>
+        <div class="plan">Banorte: Transforma T</div>
+    </div>
+    <div class="hospital" data-aseguradora="banorte" data-plan="transforma">
+        <h3>Hospital OCA</h3>
+        <div class="plan">Banorte: Transforma T</div>
+    </div>
+    <div class="hospital" data-aseguradora="banorte" data-plan="transforma">
+        <h3>Médica San Camilo</h3>
+        <div class="plan">Banorte: Transforma T</div>
+    </div>
+    <div class="hospital" data-aseguradora="banorte" data-plan="transforma">
+        <h3>Centro Médico del Ojo</h3>
+        <div class="plan">Banorte: Transforma T</div>
+    </div>
+    <div class="hospital" data-aseguradora="banorte" data-plan="transforma">
+        <h3>Centro Médico La Salle</h3>
+        <div class="plan">Banorte: Transforma T</div>
+    </div>
+    <div class="hospital" data-aseguradora="banorte" data-plan="transforma">
+        <h3>Muguerza San Nicolás</h3>
+        <div class="plan">Banorte: Transforma T</div>
+    </div>
+    <div class="hospital" data-aseguradora="banorte" data-plan="transforma">
+        <h3>Hospital UMI Obispados</h3>
+        <div class="plan">Banorte: Transforma T</div>
+    </div>
+
+    <!-- Transforma T+ -->
+    <div class="hospital" data-aseguradora="banorte" data-plan="transformaPlus">
+        <h3>Doctors Hospital</h3>
+        <div class="plan">Banorte: Transforma T+</div>
+    </div>
+    <div class="hospital" data-aseguradora="banorte" data-plan="transformaPlus">
+        <h3>Hospital Zambrano Hellion</h3>
+        <div class="plan">Banorte: Transforma T+</div>
+    </div>
+    <div class="hospital" data-aseguradora="banorte" data-plan="transformaPlus">
+        <h3>Muguerza Conchita</h3>
+        <div class="plan">Banorte: Transforma T+</div>
+    </div>
+    <div class="hospital" data-aseguradora="banorte" data-plan="transformaPlus">
+        <h3>Muguerza Sur</h3>
+        <div class="plan">Banorte: Transforma T+</div>
+    </div>
+    <div class="hospital" data-aseguradora="banorte" data-plan="transformaPlus">
+        <h3>Hospital Ángeles Valle Oriente</h3>
+        <div class="plan">Banorte: Transforma T+</div>
+    </div>
+
+    <!-- MAPFRE -->
+    <div class="hospital" data-aseguradora="mapfre" data-plan="amplio">
+        <h3>Muguerza Alta Especialidad</h3>
+        <div class="plan">Mapfre: Amplio</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="completo">
+        <h3>Hospital Zambrano Hellion</h3>
+        <div class="plan">Mapfre: Completo</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="completo">
+        <h3>Hospital Ángeles Valle Oriente</h3>
+        <div class="plan">Mapfre: Completo</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="completo">
+        <h3>Hospital San José</h3>
+        <div class="plan">Mapfre: Completo</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="completo">
+        <h3>Muguerza Cumbres</h3>
+        <div class="plan">Mapfre: Completo</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="optimo">
+        <h3>Doctors Hospital</h3>
+        <div class="plan">Mapfre: Óptimo</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="optimo">
+        <h3>Doctors East</h3>
+        <div class="plan">Mapfre: Óptimo</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="optimo">
+        <h3>Hospital OCA</h3>
+        <div class="plan">Mapfre: Óptimo</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="optimo">
+        <h3>Muguerza Conchita</h3>
+        <div class="plan">Mapfre: Óptimo</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="optimo">
+        <h3>Muguerza Sur</h3>
+        <div class="plan">Mapfre: Óptimo</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="optimo">
+        <h3>Swiss Hospital</h3>
+        <div class="plan">Mapfre: Óptimo</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="optimo">
+        <h3>Muguerza San Pedro</h3>
+        <div class="plan">Mapfre: Óptimo</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="esencial">
+        <h3>Muguerza San Nicolás</h3>
+        <div class="plan">Mapfre: Esencial</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="esencial">
+        <h3>Hospitaria</h3>
+        <div class="plan">Mapfre: Esencial</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="esencial">
+        <h3>Sierra Madre</h3>
+        <div class="plan">Mapfre: Esencial</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="esencial">
+        <h3>La Carlota</h3>
+        <div class="plan">Mapfre: Esencial</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="esencial">
+        <h3>Centro Médico La Salle</h3>
+        <div class="plan">Mapfre: Esencial</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="esencial">
+        <h3>Clínica Nogalar</h3>
+        <div class="plan">Mapfre: Esencial</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="esencial">
+        <h3>Muguerza Vidriera</h3>
+        <div class="plan">Mapfre: Esencial</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="esencial">
+        <h3>Clínica Roma</h3>
+        <div class="plan">Mapfre: Esencial</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="esencial">
+        <h3>Ginequito</h3>
+        <div class="plan">Mapfre: Esencial</div>
+    </div>
+    <div class="hospital" data-aseguradora="mapfre" data-plan="esencial">
+        <h3>San Felipe de Jesús</h3>
+        <div class="plan">Mapfre: Esencial</div>
+    </div>
+
+    <!-- PLAN SEGURO -->
+    <!-- Serie 100 -->
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie100">
+        <h3>San Felipe de Jesús</h3>
+        <div class="plan">Plan Seguro: Serie 100</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie100">
+        <h3>Hospital San Jorge</h3>
+        <div class="plan">Plan Seguro: Serie 100</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie100">
+        <h3>Médica Noreste ION</h3>
+        <div class="plan">Plan Seguro: Serie 100</div>
+    </div>
+    <!-- Serie 200 -->
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Obispado Hospital</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Ossis Institute Orthopedic</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Centro Médico Ave</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Muguerza San Nicolás</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Muguerza Alta Especialidad</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Muguerza Arista</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Muguerza Cam Chapultepec</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Muguerza Escobedo</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Muguerza Chipinque</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Muguerza Clínica San Pedro</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Muguerza Conchita</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Muguerza Contry San Juanito</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Muguerza Cam Cumbres</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Muguerza Gonzalitos</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Muguerza Huinalá</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Muguerza Suc Periférico</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Muguerza Suc Sendero</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Muguerza Sur</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Muguerza Universidad</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Muguerza Vidriera</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Doctors Hospital East</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Hospital Clínica OCA</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie200">
+        <h3>Hospital Regiomontano I Can Radio</h3>
+        <div class="plan">Plan Seguro: Serie 200</div>
+    </div>
+    <!-- Serie 300 -->
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie300">
+        <h3>Hospital Ángeles Valle Oriente</h3>
+        <div class="plan">Plan Seguro: Serie 300</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie300">
+        <h3>Doctors Hospital</h3>
+        <div class="plan">Plan Seguro: Serie 300</div>
+    </div>
+    <!-- Serie 400 -->
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie400">
+        <h3>Hospital San José</h3>
+        <div class="plan">Plan Seguro: Serie 400</div>
+    </div>
+    <div class="hospital" data-aseguradora="planSeguro" data-plan="serie400">
+        <h3>Hospital Zambrano Hellion</h3>
+        <div class="plan">Plan Seguro: Serie 400</div>
+    </div>
+
+    <!-- BX+ SEGUROS -->
+    <!-- Estándar -->
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="estandar">
+        <h3>Centro Médico Ave</h3>
+        <div class="plan">BX+: Estándar</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="estandar">
+        <h3>Centro Médico La Salle</h3>
+        <div class="plan">BX+: Estándar</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="estandar">
+        <h3>Centro Oftalmológico Valle</h3>
+        <div class="plan">BX+: Estándar</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="estandar">
+        <h3>Muguerza Hospital Conchita</h3>
+        <div class="plan">BX+: Estándar</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="estandar">
+        <h3>Muguerza Hospital Cumbres</h3>
+        <div class="plan">BX+: Estándar</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="estandar">
+        <h3>Muguerza Hospital San Nicolás</h3>
+        <div class="plan">BX+: Estándar</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="estandar">
+        <h3>Muguerza Hospital Vidriera</h3>
+        <div class="plan">BX+: Estándar</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="estandar">
+        <h3>Alivia Clínica de Alta Especialidad</h3>
+        <div class="plan">BX+: Estándar</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="estandar">
+        <h3>Hospital Centra</h3>
+        <div class="plan">BX+: Estándar</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="estandar">
+        <h3>Hospital de Ginecología y Obstetricia (Ginequito)</h3>
+        <div class="plan">BX+: Estándar</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="estandar">
+        <h3>Hospital La Carlota</h3>
+        <div class="plan">BX+: Estándar</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="estandar">
+        <h3>Hospital San José Tec de Monterrey</h3>
+        <div class="plan">BX+: Estándar</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="estandar">
+        <h3>Hospitaria</h3>
+        <div class="plan">BX+: Estándar</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="estandar">
+        <h3>Quirúrgico CAVA</h3>
+        <div class="plan">BX+: Estándar</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="estandar">
+        <h3>CAB Medical</h3>
+        <div class="plan">BX+: Estándar</div>
+    </div>
+
+    <!-- Medio / Plus -->
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="medioPlus">
+        <h3>Muguerza Hospital Alta Especialidad</h3>
+        <div class="plan">BX+: Medio / Plus</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="medioPlus">
+        <h3>Hospital Sierra Madre</h3>
+        <div class="plan">BX+: Medio / Plus</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="medioPlus">
+        <h3>Muguerza San Pedro</h3>
+        <div class="plan">BX+: Medio / Plus</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="medioPlus">
+        <h3>Doctors Hospital AUNA</h3>
+        <div class="plan">BX+: Medio / Plus</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="medioPlus">
+        <h3>Doctors Hospital East AUNA</h3>
+        <div class="plan">BX+: Medio / Plus</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="medioPlus">
+        <h3>Hospital Ángeles Valle Oriente</h3>
+        <div class="plan">BX+: Medio / Plus</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="medioPlus">
+        <h3>Hospital Clínica OCA AUNA</h3>
+        <div class="plan">BX+: Medio / Plus</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="medioPlus">
+        <h3>Centro de Urología Avanzada del Noreste ION</h3>
+        <div class="plan">BX+: Medio / Plus</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="medioPlus">
+        <h3>Medica San Camilo</h3>
+        <div class="plan">BX+: Medio / Plus</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="medioPlus">
+        <h3>Oasis Centro Médico</h3>
+        <div class="plan">BX+: Medio / Plus</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="medioPlus">
+        <h3>Swiss Hospital</h3>
+        <div class="plan">BX+: Medio / Plus</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="medioPlus">
+        <h3>Visión Cirugía Ambulatoria SC</h3>
+        <div class="plan">BX+: Medio / Plus</div>
+    </div>
+
+    <!-- Alto / Elite -->
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="altoElite">
+        <h3>Hospital Zambrano Hellion</h3>
+        <div class="plan">BX+: Alto / Elite</div>
+    </div>
+    <div class="hospital" data-aseguradora="bxPlus" data-plan="altoElite">
+        <h3>Muguerza Hospital Sur</h3>
+        <div class="plan">BX+: Alto / Elite</div>
+    </div>
+
+    <!-- GNP -->
+    <div class="hospital" data-aseguradora="gnp" data-plan="flexible">
+        <h3>Muguerza Cumbres</h3>
+        <div class="plan">GNP: Nivel 200 (Flexible Indigo)</div>
+    </div>
+    <div class="hospital" data-aseguradora="gnp" data-plan="flexible">
+        <h3>Doctors Hospital</h3>
+        <div class="plan">GNP: Nivel 200 (Flexible Indigo)</div>
+    </div>
+    <div class="hospital" data-aseguradora="gnp" data-plan="flexible">
+        <h3>Muguerza Clínica Vidriera</h3>
+        <div class="plan">GNP: Nivel 300 (Flexible Ambar)</div>
+    </div>
+    <div class="hospital" data-aseguradora="gnp" data-plan="flexible">
+        <h3>Muguerza Hospital Conchita</h3>
+        <div class="plan">GNP: Nivel 300 (Flexible Indigo)</div>
+    </div>
+    <div class="hospital" data-aseguradora="gnp" data-plan="flexible">
+        <h3>Muguerza Hospital San Nicolás</h3>
+        <div class="plan">GNP: Nivel 300 (Flexible Ambar)</div>
+    </div>
+    <div class="hospital" data-aseguradora="gnp" data-plan="flexible">
+        <h3>Muguerza Hospital Sur</h3>
+        <div class="plan">GNP: Nivel 300 (Flexible Indigo)</div>
+    </div>
+    <div class="hospital" data-aseguradora="gnp" data-plan="flexible">
+        <h3>Ginequito</h3>
+        <div class="plan">GNP: Nivel 400 (Flexible Indigo)</div>
+    </div>
+    <div class="hospital" data-aseguradora="gnp" data-plan="flexible">
+        <h3>Hospitaria</h3>
+        <div class="plan">GNP: Nivel 400 (Flexible Ambar)</div>
+    </div>
+    <div class="hospital" data-aseguradora="gnp" data-plan="flexible">
+        <h3>Hospital y Clínica OCA</h3>
+        <div class="plan">GNP: Nivel 300 (Flexible Indigo)</div>
+    </div>
+    <div class="hospital" data-aseguradora="gnp" data-plan="flexible">
+        <h3>San Jorge Hospital</h3>
+        <div class="plan">GNP: Nivel 300 (Flexible Cuarzo)</div>
+    </div>
+    <div class="hospital" data-aseguradora="gnp" data-plan="flexible">
+        <h3>Hospital San Felipe de Jesús</h3>
+        <div class="plan">GNP: Nivel 300 (Flexible Indigo)</div>
+    </div>
+    <div class="hospital" data-aseguradora="gnp" data-plan="flexible">
+        <h3>Doctors East</h3>
+        <div class="plan">GNP: Nivel 300 (Flexible Ambar)</div>
+    </div>
+    <div class="hospital" data-aseguradora="gnp" data-plan="flexible">
+        <h3>Centro de Urología Avanzada del Noreste</h3>
+        <div class="plan">GNP: Nivel 300 (Flexible Indigo)</div>
+    </div>
+    <div class="hospital" data-aseguradora="gnp" data-plan="flexible">
+        <h3>Centro Médico Ossis</h3>
+        <div class="plan">GNP: Nivel 300 (Flexible Indigo)</div>
+    </div>
+    <div class="hospital" data-aseguradora="gnp" data-plan="flexible">
+        <h3>Hospital La Carlota</h3>
+        <div class="plan">GNP: Nivel 400 (Flexible Ambar)</div>
+    </div>
+    <div class="hospital" data-aseguradora="gnp" data-plan="flexible">
+        <h3>Centro Médico San Mateo</h3>
+        <div class="plan">GNP: Nivel 400 (Flexible Ambar)</div>
+    </div>
+    <div class="hospital" data-aseguradora="gnp" data-plan="platino">
+        <h3>Hospital Zambrano Hellion</h3>
+        <div class="plan">GNP: Nivel 200 (Platino)</div>
+    </div>
+    <div class="hospital" data-aseguradora="gnp" data-plan="platino">
+        <h3>Swiss Hospital</h3>
+        <div class="plan">GNP: Nivel 200 (Platino)</div>
+    </div>
+
+    <!-- AXA -->
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Centro De Especialidades Médicas Y Cx. Ambulatoria</h3>
+        <div class="plan">AXA: Flex Plus (D/E/Z)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Muguerza Alta Especialidad</h3>
+        <div class="plan">AXA: Flex Plus (D/E)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Muguerza Cam Chipinque</h3>
+        <div class="plan">AXA: Flex Plus (D/E)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Muguerza Cam Contry</h3>
+        <div class="plan">AXA: Flex Plus (D/E)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Muguerza Cam Elite</h3>
+        <div class="plan">AXA: Flex Plus (D/E)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Muguerza Cam Gonzalitos</h3>
+        <div class="plan">AXA: Flex Plus (D/E)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Muguerza CAM Huinalá</h3>
+        <div class="plan">AXA: Flex Plus (D/E)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Muguerza Cam Leones</h3>
+        <div class="plan">AXA: Flex Plus (D/E)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Muguerza Cam Santa Catarina</h3>
+        <div class="plan">AXA: Flex Plus (D/E)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Muguerza Cam Sendero</h3>
+        <div class="plan">AXA: Flex Plus (D/E)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Muguerza Cam Universidad</h3>
+        <div class="plan">AXA: Flex Plus (D/E)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Muguerza Clínica San Pedro</h3>
+        <div class="plan">AXA: Flex Plus (D/E)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Muguerza Conchita</h3>
+        <div class="plan">AXA: Flex Plus (D/E)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Muguerza Cumbres</h3>
+        <div class="plan">AXA: Flex Plus (D/E)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Muguerza Sur</h3>
+        <div class="plan">AXA: Flex Plus (D/E)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="zafiro">
+        <h3>Clínica Médica Allende</h3>
+        <div class="plan">AXA: Flex Plus (D/E/Z)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="zafiro">
+        <h3>Clínica Vidriera</h3>
+        <div class="plan">AXA: Flex Plus (D/E/Z)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Clínica Y Maternidad Virginia</h3>
+        <div class="plan">AXA: Flex Plus (D/E)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Doctors East</h3>
+        <div class="plan">AXA: Flex Plus (D/E)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Doctors Hospital</h3>
+        <div class="plan">AXA: Flex Plus (Diamante)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="zafiro">
+        <h3>Ginequito</h3>
+        <div class="plan">AXA: Flex Plus (D/E/Z)</div>
+    </div>
+    <div class="hospital" data-aseguradora="axa" data-plan="diamante">
+        <h3>Hospital Ángeles Valle Oriente</h3>
+        <div class="plan">AXA: Flex Plus (Diamante)</div>
+    </div>
+</div>
+
+<script>
+  const filterAseguradora = document.getElementById('filterAseguradora');
+  const hospitals = document.querySelectorAll('.hospital');
+
+  function filterAll() {
+    // Obtenemos el valor seleccionado
+    const selAseguradora = filterAseguradora.value;
+
+    hospitals.forEach(h => {
+      // Obtenemos el atributo de la aseguradora de la tarjeta actual
+      const hAseguradora = h.getAttribute('data-aseguradora');
+
+      // Lógica: Si es "all" o si coincide con la selección, se muestra
+      const matchAseguradora = (selAseguradora === "all" || hAseguradora === selAseguradora);
+
+      if (matchAseguradora) {
+        h.style.display = "block";
+      } else {
+        h.style.display = "none";
+      }
+    });
+  }
+
+  // Escuchamos el cambio del selector
+  filterAseguradora.addEventListener('change', filterAll);
+
+  // EFECTO DE CARGA
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+</body>
+
+</html>

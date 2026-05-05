@@ -1,0 +1,397 @@
+/* NAVBAR GENERAL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: 130px; /* Ajustado para que no se encime con la navbar */
+  opacity: 1 !important; /* CAMBIO: Forzamos visibilidad para que no se vea en blanco */
+  transform: scale(1);
+  transition: opacity 1.2s ease, transform 1s ease;
+  overflow-x: hidden;
+  max-width: 100vw;
+  background: #f5f7fa;
+  margin: 0;
+}
+
+body.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.download-container {
+  margin: 0; 
+  display: flex;
+  justify-content: center;
+}
+
+.btn-download {
+    background-color: #e9a322; /* Dorado como tus planes */
+    color: rgb(0, 0, 0);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: #0000007c;
+}
+
+.btn-download:hover {
+    background-color: #ffe388; /* Azul de tu red */
+    transform: scale(1.05);
+    box-shadow: #1a1a1a;
+}
+
+.btn-download i {
+    font-size: 1.2rem;
+}
+
+.navbar-rh{
+     text-shadow: 2px 2px 8px black;
+  transition: background-color 0.3s ease;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #d89829; 
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  height: 120px; 
+}
+
+.navbar.scrolled {
+ background-color: rgba(204, 142, 75, 0.8); /* 80% opaco */
+  backdrop-filter: blur(6px); /* opcional: desenfoque de fondo elegante */
+}
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 110%;
+}
+
+.logo-container img {
+  width: 270px; /* Reducido un poco para que respire */
+  max-width: 45vw;
+  margin-left: 50px;
+  display: block;
+}
+
+
+
+
+/* NAV LINKS agrupados y centrados */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.nav-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1.42em;
+  letter-spacing: 2.6px;
+  transition: color 1s ease, background-color 1s ease;
+  padding: 20px 25px;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  text-shadow: 2px 2px 8px rgba(88, 88, 88, 0.76);
+  color: #000000;
+  background-color: rgba(255, 196, 0, 0.027);
+   transform: scale(1.2);
+  box-shadow: 0 4px 15px rgba(0, 48, 102, 0.418);
+  text-underline-position: above;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #e4bd7a00;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 999;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 1px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 1s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #ac843f;
+}
+
+/* BOTÓN EN NAVBAR */
+
+/* Asegura que los links estén alineados correctamente */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* REDES SOCIALES EN NAV */
+.nav-social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.nav-social a {
+ color: white;
+  font-size: 27px;
+  transition: ease-in-out 3s;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  transition: color 1s ease;
+}
+
+.nav-social a:hover {
+  color: #ffb223; /* o ajusta según tu diseño */
+  font-size: 30px;
+
+}
+/* BOTÓN EN NAVBAR pegado a la derecha */
+.nav-button {
+  height: 100%;
+  display: flex;
+  align-items: stretch; /* hace que el botón use todo el alto de la navbar */
+}
+
+.nav-button button {
+  height: 100%;
+  width: 220px;
+  padding: 0 40px;
+  color: white;
+  background-color: #062a53;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 1.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:  background-color 1s ease, color 0.8s ease;
+  clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+
+/* Estilo al pasar el mouse */
+.nav-button button:hover {
+  background-color: #020d3b;
+  color: #eca84f;
+  font-size: 1.7em;
+  font-weight: bolder;
+}
+
+/* Esto hace que empiece invisible */
+body {
+  opacity: 1 !important; /* Forza a que siempre se vea */
+  transition: opacity 0.8s ease;
+}
+
+/* ESTO ES LO QUE FALTA O ESTÁ FALLANDO */
+body.loaded {
+  opacity: 1;
+}
+
+body.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+/* CONTENEDOR GENERAL */
+.Red-section {
+  padding: 40px 20px;
+  background: #f5f7fa;
+  text-align: center;
+}
+
+.Red-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #021e31;
+}
+
+/* INPUTS Y FILTROS */
+#searchInput,
+#filterPlan {
+  padding: 12px;
+  margin: 10px;
+  width: 250px;
+  max-width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+#searchInput:focus,
+#filterPlan:focus {
+  border-color: #011a2b;
+  box-shadow: 0 0 5px rgba(2, 38, 61, 0.404);
+}
+
+/* GRID DE HOSPITALES */
+/* Busca tu clase .Red-container y reemplázala con esta */
+.Red-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Evita que sean muy delgadas */
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px; /* Tamaño máximo para que no se pierda la estética */
+  margin: 0 auto; /* ESTO LAS CENTRA: quita el hueco de la izquierda */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+/* TARJETA DE HOSPITAL */
+.hospital {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* HOVER BONITO */
+.hospital:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.493);
+}
+
+/* NOMBRE DEL HOSPITAL */
+.hospital h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+}
+
+/* PLAN */
+.plan {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 6px 12px;
+  background: #c9972c;
+  color: white;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* EFECTO DE BORDE SUPERIOR */
+.hospital::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #114669;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .Red-section {
+    padding: 30px 15px;
+  }
+
+  .hospital {
+    padding: 25px;
+  }
+}
+
+/* CONTENEDOR PROFESIONAL DE FILTROS */
+.filters-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Asegura que ocupe todo el ancho arriba */
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+/* ESTILO DEL SELECT SEGNA */
+#filterAseguradora {
+  width: 150%;
+  max-width: 450px; /* Tamaño ideal para escritorio */
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #002249; /* Azul marino de tu marca */
+  background-color: #ffffff;
+  border: 2px solid #e4bd7a; /* Dorado de tu navbar */
+  border-radius: 12px; /* Bordes suaves */
+  cursor: pointer;
+  
+  /* Quitar estilo por defecto del navegador */
+  appearance: none;
+  -webkit-appearance: none;
+  
+  /* Flecha personalizada dorada */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23e4bd7a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 18px;
+  
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* INTERACCIÓN */
+#filterAseguradora:hover {
+  border-color: #d6e9ff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+#filterAseguradora:focus {
+  background-color: #fff8ec;
+  border-color: #001731;
+}
+
+/* AJUSTE PARA CELULARES (MÓVIL) */
+@media (max-width: 600px) {
+  body {
+    padding-top: 90px; /* Ajustado al tamaño de la navbar móvil */
+  }
+  .logo-container img {
+    width: 140px; /* Logo más estético en celular */
+  }
+}

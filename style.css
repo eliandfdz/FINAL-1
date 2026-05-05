@@ -1,0 +1,788 @@
+/* NAVBAR GENERAL */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  padding-top: 120px; 
+  overflow-x: hidden;
+  max-width: 100vw;
+  font-family: Arial, sans-serif;
+}
+
+body.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.navbar {
+   text-shadow: 2px 2px 8px black;
+  transition: background-color 0.3s ease;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #d89829; 
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  height: 120px; 
+}
+
+
+.navbar.scrolled {
+  background-color: rgba(204, 142, 75, 0.8); /* 80% opaco */
+  backdrop-filter: blur(6px); /* opcional: desenfoque de fondo elegante */
+}
+
+
+/* LOGO */
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 110%;
+}
+
+.logo-container img {
+  width: 270px; /* Reducido un poco para que respire */
+  max-width: 45vw;
+  margin-left: 50px;
+  display: block;
+}
+
+
+/* NAV LINKS agrupados y centrados */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.nav-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1.42em;
+  letter-spacing: 2.6px;
+  transition: color 1s ease, background-color 1s ease;
+  padding: 20px 25px;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  text-shadow: 2px 2px 8px rgba(88, 88, 88, 0.76);
+  color: #000000;
+  background-color: rgba(255, 196, 0, 0.027);
+   transform: scale(1.2);
+  box-shadow: 0 4px 15px rgba(0, 48, 102, 0.418);
+  text-underline-position: above;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #e4bd7a;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 999;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 1px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 1s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #ac843f;
+}
+
+/* BOTÓN EN NAVBAR */
+
+/* Asegura que los links estén alineados correctamente */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* REDES SOCIALES EN NAV */
+.nav-social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.nav-social a {
+ color: white;
+  font-size: 27px;
+  transition: ease-in-out 3s;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  transition: color 1s ease;
+}
+
+.nav-social a:hover {
+  color: #ffb223; /* o ajusta según tu diseño */
+  font-size: 30px;
+
+}
+/* BOTÓN EN NAVBAR pegado a la derecha */
+.nav-button {
+  height: 100%;
+  display: flex;
+  align-items: stretch; /* hace que el botón use todo el alto de la navbar */
+}
+
+.nav-button button {
+  height: 100%;
+  width: 220px;
+  padding: 0 40px;
+  color: white;
+  background-color: #062a53;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 1.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:  background-color 1s ease, color 0.8s ease;
+  clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+
+/* Estilo al pasar el mouse */
+.nav-button button:hover {
+  background-color: #020d3b;
+  color: #eca84f;
+  font-size: 1.7em;
+  font-weight: bolder;
+}
+
+
+
+
+/* CONTENIDO PRINCIPAL */
+.principal-content h1{
+  text-align: center;
+  padding: 50px;
+}
+
+/* TÍTULOS */
+h1 {
+  color: #132a3e;
+}
+
+.intro-text {
+  display: none;
+}
+
+.second-line h1{
+  text-align: center;
+  text-decoration: solid;
+  color: #ebbd68;
+    text-decoration: underline;
+  font-size: 40px;
+  text-shadow: 2px 2px 5px rgba(0, 78, 85, 0.8);
+  
+}
+
+.Square_Services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+  padding: 20px;
+  max-width: 1000px; /* limita el ancho para que haya saltos de línea */
+  margin: 0 auto;   /* centra el contenedor */
+}
+
+.Square_Services .service {
+  text-align: center;
+  width: 180px;
+}
+
+.Square_Services img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Square_Services h3 {
+  margin-top: 10px;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.Square_Services button {
+  margin-top: 10px;
+  padding: 8px 20px;
+  border: none;
+  background-color: #677683;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.28em;
+  transition: color 1s ease, background-color 1s ease;
+  transition: color 1s ease, box-shadow 0.5s ease;
+}
+
+.Square_Services button:hover {
+  background-color: rgb(78, 78, 78);
+  color: #00bcd4;
+  transform: scale(1.2);
+  box-shadow: 0 4px 15px rgb(255, 255, 255);
+}
+
+.services-section {
+  background-color: #536f77;
+   padding: 40px 20px;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  overflow: hidden;
+  border-radius:0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  width: 100%; /* 3 slides = 3 x 100% */
+}
+
+.slide {
+  min-width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 8px black;
+  background-size: cover;
+  background-position: center center; /* Importante para que el centro de la foto sea el foco */
+  background-repeat: no-repeat;
+   overflow: hidden;
+}
+
+/* Personaliza los colores de fondo */
+.slide1 { background: url('FONDO PAGINA LOOM.png') center/cover no-repeat; }
+.slide2 { background: #5a7088; }
+.slide3 { background: hsl(187, 90%, 16%); }
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.2rem;
+  color: rgb(0, 0, 0);
+  background-color: rgba(180, 180, 180, 0.4);
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efecto al poner el cursor encima */
+.arrow:hover {
+  background-color: rgba(143, 86, 0, 0.85);
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes clickPulse {
+  0% { transform: translateY(-50%) scale(1); }
+  50% { transform: translateY(-50%) scale(0.9); }
+  100% { transform: translateY(-50%) scale(1); }
+}
+
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.clientes-section {
+  background-color: #536f77;
+  padding: 0px 25px;
+  text-align: center;
+}
+
+.clientes-section h2 {
+  color: white;
+  font-size: 1.85em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.clientes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.clientes-grid img {
+  width: 200px;
+  height: 160px;
+  object-fit: contain;
+  background-color: rgb(177, 212, 231);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(1, 59, 59, 0.363);
+  transition: color 1.2s ease, background-color 1.5s ease;
+}
+
+.clientes-grid img:hover {
+  background-color: rgb(120, 188, 224);
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgb(255, 255, 255);
+}
+
+
+
+.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+body {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+body.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+<!-- Sección de Aseguradoras-->
+.aseguradoras-section {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+
+.aseguradoras-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.aseguradoras-grid img {
+  width: 1010px;
+  height: 1000px;
+  object-fit: contain;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(15, 153, 153, 0.363);
+}
+
+.aseguradoras-grid img:hover {
+  background-color: rgb(0, 0, 0);
+  transform: scale(1.5);
+  box-shadow: 0 4px 15px rgb(255, 255, 255);
+}
+
+.aseguradoras-section {
+  background-color: #ff0d0d00;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+
+.slider-client {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  gap: 40px;
+  animation: scroll 19s linear infinite;
+}
+
+.slider img {
+  width: 170px;
+  height: 190px;
+  object-fit: contain;
+  background-color: #00000000;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.8s ease, background-color 0.3s ease;
+}
+
+.slider img:hover {
+  transform: scale(1.1);
+  background-color: #e3f7ff00;
+}
+
+<!-- Sección de Aseguradoras Termina-->
+
+/* Asegúrate de tener este bloque en tu archivo CSS */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #000;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.contenedor-general {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 30px;
+  width: 100%;
+}
+
+.mision-vision {
+  flex: 1.5;
+  min-width: 300px;
+}
+
+.valores {
+  flex: 1;
+  min-width: 300px;
+}
+
+.titulo {
+  font-size: 3em;
+  font-weight: normal;
+  text-decoration: underline;
+  margin-bottom: 0.6em;
+}
+
+.titulo-secundario {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.mision-vision p {
+  font-size: 1.5em;
+  line-height: 1.8;
+  margin-bottom: 2em;
+  text-align: left;
+}
+
+.valores p {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+
+  .mision-vision, .valores {
+    width: 100%;
+  }
+
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.principal-content {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  margin-top: 40px; 
+}
+
+.slider-banner {
+  background-color: #011822;
+  overflow: hidden;
+  width: 115%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  margin-top: 0px; /* Ajusta según tu navbar */
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 60, 95, 0.2);
+}
+
+.slider-text {
+  white-space: nowrap;
+  display: inline-block;
+  animation: slideText 15s linear infinite;
+}
+
+.slider-text h1 {
+  font-size: 1.8em;
+  color: white;
+  margin: 0;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(184, 220, 223, 0.8);
+}
+
+@keyframes slideText {
+  0% {
+    transform: translateX(250%); /* Empieza justo fuera del lado derecho */
+  }
+  100% {
+    transform: translateX(-100%); /* Sale completamente por la izquierda */
+  }
+}
+
+
+
+.slider-banner:hover .slider-text {
+  color: #00bcd4;
+  background-color: rgba(0, 0, 0, 0.151);
+   transform: scale(1.2);
+  box-shadow: 0 4px 15px rgba(14, 47, 90, 0.2);
+  text-underline-position: above;
+}
+
+  .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #00aced; /* Cambia según tu paleta */
+  }
+
+  /* AJUSTES RESPONSIVOS BASADOS EN TU CÓDIGO DE RED HOSPITALARIA */
+
+@media (max-width: 768px) {
+  /* 1. Ajuste General del Body */
+  body {
+    padding-top: 85px !important; 
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  /* 2. Navbar: Base */
+  .navbar-rh, .navbar {
+    height: 95px !important;
+    display: flex !important;
+    align-items: center !important; 
+    justify-content: space-between !important;
+    padding: 0 15px !important;
+    background-color: #e4a333;  !important; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+
+  /* 3. Logo */
+  .logo-container img {
+    margin-left: -15px;
+    width: 190px !important; 
+    height:auto !important;
+  }
+
+  /* 4. MENÚ HAMBURGUESA: Icono de 3 líneas */
+  .menu-toggle {
+    display: flex !important; /* Lo hacemos visible */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    order: 2; /* Lo mueve a la derecha */
+  }
+
+  .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #001731;
+    border-radius: 2px;
+  }
+
+  /* 5. NAV LINKS: Menú Desplegable vertical */
+  .nav-links {
+    display: none !important; /* Oculto por defecto */
+    flex-direction: column !important;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    background-color: #d89829d8;  !important;
+    padding: 20px 0 !important;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+
+  /* Esta clase se activa con JavaScript */
+  .nav-links.active {
+    display: flex !important;
+  }
+
+  .nav-links a {
+    padding: 15px !important;
+    color: #001731 !important;
+    font-size: 1.1rem !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    width: 100%;
+  }
+
+  /* 6. Botón Cotizar: Tamaño destacado */
+  .nav-button {
+    order: 3; /* Lo mantiene al final o después del logo */
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-button button {
+    margin-right: -20px;
+    width: 125px !important; 
+    height: 96px !important; 
+    font-size: 1.2rem !important; 
+    font-weight: bold !important;
+    color: white !important;
+    background-color: #001731 !important; 
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%) !important;
+  }
+
+  /* Ocultar elementos innecesarios */
+  .nav-social, .navbar-rh h2, .navbar h2 { 
+    display: none !important; 
+  }
+
+  /* 7. Slider y Flechas */
+  .slider-container {
+    margin-top: 0 !important;
+    height: 300px !important;
+  }
+  
+  .slide {
+    height: 300px !important;
+    font-size: 1.2rem !important;
+  }
+
+  .slider-banner {
+  background-color: #011822;
+  overflow: hidden;
+  width: 115%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  margin-top: 0px; /* Ajusta según tu navbar */
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 60, 95, 0.2);
+}
+
+.slider-text {
+  white-space: nowrap;
+  display: inline-block;
+  animation: slideText 15s linear infinite;
+}
+
+.slider-text h1 {
+  font-size: 1.45em;
+  color: white;
+  margin: 0;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(184, 220, 223, 0.8);
+}
+
+@keyframes slideText {
+  0% {
+    transform: translateX(175%); /* Empieza justo fuera del lado derecho */
+  }
+  100% {
+    transform: translateX(-70%); /* Sale completamente por la izquierda */
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.2rem;
+  color: rgba(0, 0, 0, 0.404);
+  background-color: rgba(180, 180, 180, 0.192);
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efecto al poner el cursor encima */
+.arrow:hover {
+  background-color: rgba(143, 86, 0, 0.507);
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes clickPulse {
+  0% { transform: translateY(-50%) scale(1); }
+  50% { transform: translateY(-50%) scale(0.9); }
+  100% { transform: translateY(-50%) scale(1); }
+}
+
+}

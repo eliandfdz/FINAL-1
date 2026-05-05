@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cotizar SEGNA </title>
+  <link rel="stylesheet" href="cotizar-style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="navbar-cotizar">
+  <div class="logo-container">
+    <a href="index.html">
+      <img src="LOGO.png" alt="Fegza">
+    </a>
+  </div>
+
+  <div class="nav-links">
+    <div class="nav-link1">
+      <a href="index.html">Inicio</a>
+    </div>
+    <div class="nav-link2">
+      <div class="dropdown">
+         <a href="Red-Hospitalaria.html">Red Hospitalaria (Nuevo Leon)</a>
+        <div class="dropdown-content">
+        </div>
+      </div>
+    </div>
+    <div class="nav-link3">
+      <a href="Contacto.html">Contacto</a>
+    </div>
+  </div>
+ <!-- REDES SOCIALES -->
+  <div class="nav-social">
+    <a href="https://www.facebook.com/SEGNA.ASESORES/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/segna.asesores/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/521234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <div class="nav-button">
+    <button onclick="window.location.href='Cotizar.html'">Cotizar</button>
+  </div>
+</div>
+
+<!-- FORMULARIO COTIZAR -->
+<div class="cotizar-formulario">
+  <h2>Cotizamos tu Seguro</h2>
+
+  <form id="cotizarForm" 
+        action="https://script.google.com/macros/s/AKfycbz5pZIiwCxpywkEw_MQ3fmziVm3ckP-vAQSQdflvw7k8UALwWN_j0jtQeEi2dmaS5k3tw/exec" 
+        method="POST">
+        
+    <div class="form-row">
+      <div class="form-group">
+        <label>NOMBRE*</label>
+        <input type="text" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label>APELLIDO PATERNO*</label>
+        <input type="text" name="apellido_paterno" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>APELLIDO MATERNO*</label>
+        <input type="text" name="apellido_materno" required>
+      </div>
+      <div class="form-group">
+        <label>EMPRESA</label>
+        <input type="text" name="empresa">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>EMAIL*</label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label>TELÉFONO CELULAR*</label>
+        <input type="tel" name="telefono" required>
+      </div>
+    </div>
+
+  <div class="form-row">
+  <div class="form-group full-width">
+    <label>¿QUÉ DESEAS COTIZAR?*</label>
+<select name="cotizacion" required>
+  <option value="" disabled selected>Seleccione una opción</option>
+  <option value="Auto">Auto</option>
+  <option value="Pick Up">Pick Up</option>
+  <option value="Moto">Moto</option>
+  <option value="Tracto camión">Tracto camión</option>
+  <option value="Equipo pesado">Equipo pesado</option>
+  <option value="Gastos médicos">Gastos médicos</option>
+  <option value="Seguro de vida">Seguro de vida</option>
+  <option value="Seguro de vivienda">Seguro de vivienda</option>
+  <option value="Empresarial">Empresarial</option>
+  <option value="Seguro de defunción">Seguro de defunción</option>
+  <option value="Asistencia de viaje">Asistencia de viaje</option>
+  <option value="Responsabilidad civil">Responsabilidad civil</option>
+  <option value="Otro">Otro</option>
+</select>
+
+  </div>
+</div>
+
+
+    <button type="submit" class="submit-btn">ENVIAR</button>
+  </form>
+
+  <script>
+    document.getElementById("cotizarForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      fetch(form.action, {
+        method: "POST",
+        body: data
+      })
+      .then(response => response.text())
+      .then(responseText => {
+        alert("¡Formulario enviado correctamente!");
+        form.reset();
+      })
+      .catch(error => {
+        alert("Hubo un error al enviar el formulario.");
+        console.error(error);
+      });
+    });
+  </script>
+</div>
+
+
+
+<script>
+  window.addEventListener('load', function () {
+    document.body.classList.add('loaded');
+  });
+</script>
+
+</body>
+</html>

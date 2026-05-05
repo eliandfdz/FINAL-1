@@ -1,0 +1,349 @@
+<!-- PROTEGIENDO TU VIDA Y TU FUTURO -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>SEGNA ASESORES EN SEGUROS </title>
+  <link rel="stylesheet" href="style.css">        
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+
+
+<script>
+  document.querySelectorAll('.arrow').forEach(arrow => {
+  arrow.addEventListener('click', () => {
+    arrow.style.animation = 'clickPulse 0.3s';
+    
+    // Limpiar la animación para que funcione en cada clic
+    arrow.addEventListener('animationend', () => {
+      arrow.style.animation = '';
+    }, { once: true });
+  });
+});
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll('.nav-link');
+
+    links.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.body.classList.add('fade-out');
+        const href = this.getAttribute('href') || this.getAttribute('data-href');
+        setTimeout(() => {
+          window.location.href = href;
+        }, 1000); // Igual que tu transición
+      });
+    });
+  });
+</script>
+
+<body>
+<div class="navbar">
+  <!-- LOGO -->
+  <div class="logo-container">
+    <a href="index.html">
+      <img src="LOGO.png" alt="Fegza">
+    </a>
+  </div>
+
+  <!-- Icono de Hamburguesa (Solo visible en móvil) -->
+    <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+  <!-- NAV LINKS -->
+  <div class="nav-links">
+    <div class="nav-link1">
+      <a href="index.html">Inicio</a>
+    </div>
+    <div class="nav-link2">
+      <div class="dropdown">
+        <a href="Red-Hospitalaria.html">Red Hospitalaria (Nuevo Leon)</a>
+      </div>
+    </div>
+    <div class="nav-link3">
+      <a href="Contacto.html">Contacto</a>
+    </div>
+  </div>
+
+  <!-- REDES SOCIALES -->
+  <div class="nav-social">
+    <a href="https://www.facebook.com/SEGNA.ASESORES/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/segna.asesores/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/521234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <!-- BOTÓN -->
+  <div class="nav-button">
+    <button onclick="fadeToCotizar()">Cotizar</button>
+  </div>
+</div>
+
+ 
+
+  <!-- CONTENIDO DEBAJO DE LA BARRA -->
+<div class="slider-banner">
+  <div class="slider-text">
+    <h1>"Protegiendo tu vida y tu futuro"</h1>
+  </div>
+</div>
+
+
+
+  <div>
+  <!-- SLIDER reemplazando la imagen -->
+<div class="slider-container">
+  <button class="arrow prev">&#10094;</button>
+  <div class="slides">
+    <div class="slide slide1">Mas de 30 años nos respaldan</div>
+    <div class="slide slide2">Protege lo que más importa</div>
+    <div class="slide slide3">Cotiza tu seguro hoy</div>
+  </div>
+  <button class="arrow next">&#10095;</button>
+</div>
+
+  </div>
+
+<div class="services-section">
+  <div class="second-line">
+    <h1>Servicios</h1>
+  </div>
+  <hr>
+  <div class="Square_Services">
+
+    <div class="service">
+      <img src="Gastos_medicos.webp" alt="Gastos Médicos">
+      <h3>Gastos Médicos</h3>
+      <button onclick="window.location.href='Cotizar.html'">Cotizar</button>
+    </div>
+
+    <div class="service">
+      <img src="Seguro_de_Vida.webp" alt="Seguro de Vida">
+      <h3>Seguro de Vida</h3>
+      <button onclick="window.location.href='Cotizar.html'">Cotizar</button>
+    </div>
+
+    <div class="service">
+      <img src="Seguro_de_Auto.webp" alt="Seguro de Auto">
+      <h3>Seguro de Auto</h3>
+      <button onclick="window.location.href='Cotizar.html'">Cotizar</button>
+    </div>
+
+    <div class="service">
+      <img src="Seguro_de_Vivienda.jpg" alt="Seguro de Vivienda">
+      <h3>Seguro de Vivienda</h3>
+      <button onclick="window.location.href='Cotizar.html'">Cotizar</button>
+    </div>
+
+    <div class="service">
+      <img src="Transportacion_de_mercancia.jpg" alt="Transportación de Mercancía">
+      <h3>Transportación de Mercancía</h3>
+      <button onclick="window.location.href='Cotizar.html'">Cotizar</button>
+    </div>
+
+    <div class="service">
+      <img src="Transportacion_de_mercancia.jpg" alt="Tractocamión">
+      <h3>Tractocamión</h3>
+      <button onclick="window.location.href='Cotizar.html'">Cotizar</button>
+    </div>
+
+    <div class="service">
+      <img src="Empresarial.png" alt="Empresarial">
+      <h3>Empresarial</h3>
+      <button onclick="window.location.href='Cotizar.html'">Cotizar</button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Sección de clientes -->
+<div class="clientes-section">
+  <hr>
+  <h2>Conoce algunos de nuestros<br>clientes</h2>
+  <hr>
+
+  <div class="clientes-grid">
+    <a href="http://www.ecoplastic.com.mx/" target="_blank">
+      <img src="Eco_Plastic.png" alt="Eco Plastic">
+    </a>
+    <a href="https://www.cortinasdeacerochagar.com/" target="_blank">
+      <img src="CHAGAR.png" alt="Chagar">
+    </a>
+    <a href="https://chagar.com.mx/" target="_blank">
+      <img src="CHAGAR_2.png" alt="Chagar 2">
+    </a>
+    <a href="https://aldeariopilon.com/" target="_blank">
+      <img src="FEGZA.png" alt="Fegza">
+    </a>
+    <a href="http://grupofernandez.mx/" target="_blank">
+      <img src="Grupo_Fernandez.png" alt="Grupo Fernández">
+    </a>
+    <a href="https://dipse.mx/" target="_blank">
+      <img src="DIPSE.png" alt="Dipse">
+    </a>
+    <a href="https://www.posmabi.com.mx/" target="_blank">
+      <img src="Posmabi.png" alt="Posmabi">
+    </a>
+    <a href="https://cegasa.com.mx/" target="_blank" >
+      <img src="Cegasa.png" alt="cegasa">
+      </a>
+
+  </div>
+</div>
+
+<div class="aseguradoras-section">
+  <div class="aseguradoras-grid">
+<!-- Sección de Aseguradoras -->
+<div class="aseguradoras-section">
+  <div class="slider-client">
+    <div class="slider">
+      <!-- 14 logos originales -->
+      <img src="AFIRME.png" alt="Afirme">
+      <img src="ANA_SEGUROS.png" alt="ANA Seguros">
+      <img src="AXA_SEGUROS.png" alt="AXA">
+      <img src="ASSIT_CARD.png" alt="Assist Card">
+      <img src="BX+.png" alt="BX+">
+      <img src="SEGUROS_BANORTE.png" alt="Seguros Banorte">
+      <img src="CHUBB.png" alt="Chubb">
+      <img src="GNP.png" alt="GNP Seguros">
+      <img src="MAPFRE.png" alt="Mapfre">
+      <img src="METLIFE.png" alt="Metlife">
+      <img src="QUALITAS.png" alt="Quálitas">
+      <img src="SEGUROS_MONTERREY.png" alt="Seguros Monterrey">
+      <img src="SURA.png" alt="Sura">
+      <img src="ZURICH.png" alt="Zurich">
+
+      <!-- Rep -->
+      <img src="AFIRME.png" alt="Afirme">
+      <img src="ANA_SEGUROS.png" alt="ANA Seguros">
+      <img src="AXA_SEGUROS.png" alt="AXA">
+      <img src="ASSIT_CARD.png" alt="Assist Card">
+      <img src="BX+.png" alt="BX+">
+      <img src="SEGUROS_BANORTE.png" alt="Seguros Banorte">
+      <img src="CHUBB.png" alt="Chubb">
+      <img src="GNP.png" alt="GNP Seguros">
+      <img src="MAPFRE.png" alt="Mapfre">
+      <img src="METLIFE.png" alt="Metlife">
+      <img src="QUALITAS.png" alt="Quálitas">
+      <img src="SEGUROS_MONTERREY.png" alt="Seguros Monterrey">
+      <img src="SURA.png" alt="Sura">
+      <img src="ZURICH.png" alt="Zurich">
+    </div>
+  </div>
+</div>
+
+   </div>
+</div>
+<div class="contenedor-general">
+  <div class="mision-vision">
+    <h1 class="titulo">Misión</h1>
+    <p>
+      Ofrecer coberturas personalizadas y soluciones digitales de vanguardia, respaldadas por un trato humano y transparente que genere confianza en cada paso.
+    </p>
+
+    <h1 class="titulo">Visión</h1>
+    <p>
+      Ser la referencia en seguros en México, reconocida por su integridad, cercanía e innovación, protegiendo lo esencial con claridad y eficiencia.
+    </p>
+  </div>
+
+  <div class="valores">
+    <h2 class="titulo-secundario">Nuestro valores:</h2>
+    <p><strong>Confianza:</strong> Actuamos con integridad y transparencia para ganarnos tu confianza en cada paso.</p>
+    <p><strong>Responsabilidad:</strong> Cumplimos nuestros compromisos con seriedad, ofreciendo soluciones reales y a tiempo.</p>
+    <p><strong>Cercanía:</strong> Escuchamos, entendemos y acompañamos. Estamos contigo, no solo como aseguradora, sino como aliado.</p>
+    <p><strong>Calidad:</strong> Ofrecemos atención personalizada, procesos claros y respaldo sólido para proteger lo que más valoras.</p>
+    <p><strong>Innovación:</strong> Nos adaptamos a los cambios y buscamos mejorar continuamente, para brindarte seguros prácticos, eficientes y accesibles.</p>
+  </div>
+</div>
+
+<footer style="background:#111; color:white; text-align:center; padding:20px;">
+  <p>Síguenos en redes:</p>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/SEGNA.ASESORES/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/segna.asesores/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/521234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</footer>
+
+<!-- Agrega FontAwesome si no lo tienes -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+<script>
+  const slides = document.querySelector('.slides');
+  const slideCount = document.querySelectorAll('.slide').length;
+  let currentIndex = 0;
+
+  function updateSlide() {
+    // Asegúrate de que el cálculo sea exacto al ancho de cada slide
+    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  document.querySelector('.next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slideCount;
+    updateSlide();
+  });
+
+  document.querySelector('.prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+    updateSlide();
+  });
+
+  // TIEMPO AJUSTADO: Cambiado de 2000 a 5000 (5 segundos)
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slideCount;
+    updateSlide();
+  }, 5000); 
+</script>
+
+<script>
+  function fadeToCotizar() {
+    document.body.classList.add('fade-out');
+    setTimeout(function () {
+      window.location.href = 'Cotizar.html';
+    }, 600);
+  }
+</script>
+
+<!-- SCRIPT DE NAV BAR SCROLL -->
+
+<script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 10) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+
+<script>
+  const menuToggle = document.getElementById('mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Cerrar el menú al hacer clic en un enlace
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+</script>
+
+</body>
+</html>
+
+</body>
